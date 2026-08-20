@@ -22,6 +22,7 @@
 - 用途：按用户名检查公开社交账号是否存在
 - 版本：0.16.0
 - 示例：`sherlock <用户名>`
+- 完整教程：[docs/sherlock-tutorial.md](docs/sherlock-tutorial.md)
 
 ## 环境
 

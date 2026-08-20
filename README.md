@@ -29,3 +29,5 @@ git status    # 查看当前工作区状态
 - `sherlock`：按用户名搜索公开社交账号
 
 详细用法见 [TOOLS.md](TOOLS.md)。
+
+`sherlock` 的完整中文使用教程见 [docs/sherlock-tutorial.md](docs/sherlock-tutorial.md)。
