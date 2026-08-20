@@ -24,6 +24,28 @@
 - 示例：`sherlock <用户名>`
 - 完整教程：[docs/sherlock-tutorial.md](docs/sherlock-tutorial.md)
 
+### Sherlock 已新增的国内站点
+
+已加入本机站点列表：Gitee、博客园（CNBlogs）、语雀（Yuque）。Sherlock 默认从官方远程清单加载站点，因此搜索这些国内站点时需要加 `--local`：
+
+```powershell
+sherlock --local --site Gitee 用户名
+sherlock --local --site CNBlogs 用户名
+sherlock --local --site Yuque 用户名
+```
+
+抖音、微博、知乎、小红书、Bilibili 等平台需要登录或依赖 JavaScript 渲染，或使用数字 ID，无法用当前方式可靠搜索。
+
+升级 sherlock 后如发现国内站点丢失，需要在 `C:\Users\Shuqin\AppData\Local\Programs\Python\Python314\Lib\site-packages\sherlock_project\resources\data.json` 中重新加入以下条目：
+
+```json
+{
+  "CNBlogs": { "errorType": "status_code", "url": "https://www.cnblogs.com/{}", "urlMain": "https://www.cnblogs.com/", "username_claimed": "dudu" },
+  "Gitee": { "errorType": "status_code", "url": "https://gitee.com/{}", "urlMain": "https://gitee.com/", "username_claimed": "oschina" },
+  "Yuque": { "errorType": "status_code", "url": "https://www.yuque.com/{}", "urlMain": "https://www.yuque.com/", "username_claimed": "yuque" }
+}
+```
+
 ## 环境
 
 - 工具目录：`C:\Users\Shuqin\AppData\Local\Programs\Python\Python314\Scripts\`

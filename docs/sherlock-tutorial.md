@@ -86,3 +86,15 @@ sherlock --site github --timeout 20 octocat
 - 不同平台可能对批量请求有限制，请合理设置 `--timeout` 并降低请求频率
 - 需要匿名访问时再使用 Tor 或代理，普通使用不需要
 - NSFW 网站默认被排除，明确需要时才使用 `--nsfw`
+
+## 国内平台支持情况
+
+本机已加入三个国内站点：Gitee、博客园（CNBlogs）、语雀（Yuque）。Sherlock 默认加载官方远程站点清单，所以搜索这些站点时要加 `--local`：
+
+```bash
+sherlock --local --site Gitee 用户名
+sherlock --local --site CNBlogs 用户名
+sherlock --local --site Yuque 用户名
+```
+
+抖音、微博、知乎、小红书、Bilibili 等主流平台暂时无法支持：它们需要登录或依赖 JavaScript 渲染，或者主页使用数字 ID，无法通过简单的用户名 URL 判断账号是否存在。
